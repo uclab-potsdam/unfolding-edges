@@ -49,56 +49,7 @@
       pointer-events: none;
     }
 
-    /*
-        * === SEARCH BOX===
-        */
-    .searchiconbg {
-      background-color: lightgrey;
-      height: 24px;
-      margin-top: 0px;
-      margin-left: 13px;
-    }
 
-    #search-icon {
-      position: relative;
-      margin-top: 3px;
-      padding-left: 5px;
-      padding-right: 5px;
-      color: #474747;
-    }
-
-    .search {
-      position: relative;
-      width: 300px;
-      font-size: 1em;
-      margin-left: 0px;
-      margin-top: 20px;
-      border: 0;
-    }
-
-    .search-container {
-      margin-top: 0;
-      z-index: 3;
-      display: block;
-      position: fixed;
-      top: 10;
-      left: calc(50% - 150px);
-    }
-
-    #eventList {
-      backdrop-filter: blur(8px);
-      right: 0;
-      top: 0;
-      width: 350px;
-      height: 100%;
-      position: fixed;
-      display: block;
-      background-color: rgba(255, 255, 255, 0.5);
-      z-index: 200;
-      padding: 20px;
-      outline: 1px solid grey;
-      overflow-y: auto;
-    }
 
     .highlighted {
       stroke: var(--edge-color-selected) !important;
@@ -132,15 +83,6 @@
       padding: 0;
     }
 
-    #circle-cutout rect {
-      fill: #fff;
-      width: 100%;
-      height: 100%;
-    }
-
-    .circle-cutout circle {
-      fill: #000;
-    }
   </style>
 
 </head>
@@ -153,21 +95,11 @@
         <filter id="blur">
           <feGaussianBlur stdDeviation="0.5" />
         </filter>
-
-        <mask id="circle-cutout">
-          <rect x="0" y="0" width="50" height="50"></rect>
-          <circle id="cutoutCircle1" cx=0 cy=0 r=5></circle>
-          <circle id="cutoutCircle2" cx=0 cy=0 r=5></circle>
-        </mask>
       </defs>
     </svg>
 
   </div>
-  <div class="search-container">
-    <div id="search"></div>
-  </div>
 
-  <div id="eventList" style="display:none;"></div>
 
 
   <script type="text/javascript" src="conflict-network.js"></script>

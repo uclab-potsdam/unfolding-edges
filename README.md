@@ -1,5 +1,5 @@
 # Unfolding Edges: Adding Context to Edges in Multivariate Graph Visualization
-This is a prototype implementation of »Unfolding Edges: Adding Context to Edges in Multivariate Graph Visualization« (2023) by Mark-Jan Bludau, Marian Dörk, and Christian Tominski.
+This is a prototype implementation of »Unfolding Edges: Adding Context to Edges in Multivariate Graph Visualization« (2023) by [Mark-Jan Bludau](https://markjanbludau.de), [Marian Dörk](https://mariandoerk.de), and [Christian Tominski](https://vcg.informatik.uni-rostock.de/~ct/).
 
 ## Case Study 1: Nobelprize Network
 ### Edge fan-out

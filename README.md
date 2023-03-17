@@ -22,6 +22,8 @@ This is a prototype implementation of »Unfolding Edges: Adding Context to Edges
 The prototype is based on HTML, CSS, SVG, and JavaScript and uses the the datavisualization library [D3.js](https://github.com/d3/d3).
 
 ## Installation / Run locally
+*Note: So far, the code and prototypes are not yet optimized for easy re-use and readability. We will work on this in the near future.*
+
 In order to run the prototypes locally, due to security measures of web browsers you need to run a local web server. You can use for instace the [npm http-server](https://www.npmjs.com/package/http-server).
 
 Install:
@@ -35,3 +37,4 @@ To run the server:
 `http-server &`
 
 This will start the server on http://localhost:8080 from your selected directory.
+

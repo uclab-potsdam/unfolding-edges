@@ -1,0 +1,176 @@
+<html>
+
+<head>
+  <title>Unfolding Edges</title>
+
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+  <script src="https://d3js.org/d3.v6.js"></script>
+  <style>
+    :root {
+      --main-node-color: rgb(53, 75, 84);
+      --node-stroke: white;
+      --main-edge-color: rgba(132, 147, 146, 1);
+      --node-color-selected: rgb(53, 75, 84);
+      --node-color-relevant: rgb(53, 75, 84);
+      --node-color-unselected: rgba(218, 231, 230, 0.72);
+      --edge-color-unselected: rgba(218, 231, 230, 0.72);
+      --edge-color-selected: rgb(17, 24, 27);
+      --label-color: rgb(0, 0, 0);
+      --label-bg-color: white;
+      --insert-text-highlight-color: rgb(228, 97, 84);
+    }
+
+    body {
+      padding: 0;
+      font-family: sans-serif;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    #chart {
+      top: 0;
+      padding: 0;
+      margin: 0;
+    }
+
+    #svg {
+      padding: 0;
+      margin: 0;
+    }
+
+    .label {
+      font-style: italic;
+      pointer-events: none;
+    }
+
+    .labelbg {
+      font-style: italic;
+      pointer-events: none;
+    }
+
+    /*
+        * === SEARCH BOX===
+        */
+    .searchiconbg {
+      background-color: lightgrey;
+      height: 24px;
+      margin-top: 0px;
+      margin-left: 13px;
+    }
+
+    #search-icon {
+      position: relative;
+      margin-top: 3px;
+      padding-left: 5px;
+      padding-right: 5px;
+      color: #474747;
+    }
+
+    .search {
+      position: relative;
+      width: 300px;
+      font-size: 1em;
+      margin-left: 0px;
+      margin-top: 20px;
+      border: 0;
+    }
+
+    .search-container {
+      margin-top: 0;
+      z-index: 3;
+      display: block;
+      position: fixed;
+      top: 10;
+      left: calc(50% - 150px);
+    }
+
+    #eventList {
+      backdrop-filter: blur(8px);
+      right: 0;
+      top: 0;
+      width: 350px;
+      height: 100%;
+      position: fixed;
+      display: block;
+      background-color: rgba(255, 255, 255, 0.5);
+      z-index: 200;
+      padding: 20px;
+      outline: 1px solid grey;
+      overflow-y: auto;
+    }
+
+    .highlighted {
+      stroke: var(--edge-color-selected) !important;
+      /* opacity:1!important; */
+    }
+
+
+
+    .tooltip {
+      background: white;
+      border-radius: 4px;
+      box-shadow: 0 0 1px #999999;
+      color: #333;
+      font-size: 12px;
+      padding: 5px;
+      position: absolute;
+      text-align: left;
+      z-index: 10;
+      display: inline-block;
+    }
+
+    .tooltip-date {
+      font-weight: 400;
+      font-size: 15px;
+    }
+
+    .tooltip-title {
+      font-weight: 400;
+      font-size: 12;
+      margin: 0;
+      padding: 0;
+    }
+
+    #circle-cutout rect {
+      fill: #fff;
+      width: 100%;
+      height: 100%;
+    }
+
+    .circle-cutout circle {
+      fill: #000;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="chart"><svg>
+      <defs>
+
+        <filter id="blur">
+          <feGaussianBlur stdDeviation="0.5" />
+        </filter>
+
+        <mask id="circle-cutout">
+          <rect x="0" y="0" width="50" height="50"></rect>
+          <circle id="cutoutCircle1" cx=0 cy=0 r=5></circle>
+          <circle id="cutoutCircle2" cx=0 cy=0 r=5></circle>
+        </mask>
+      </defs>
+    </svg>
+
+  </div>
+  <div class="search-container">
+    <div id="search"></div>
+  </div>
+
+  <div id="eventList" style="display:none;"></div>
+
+
+  <script type="text/javascript" src="conflict-network.js"></script>
+</body>
+
+</html>

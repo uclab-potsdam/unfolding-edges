@@ -4,12 +4,15 @@ This is a prototype implementation of »Unfolding Edges: Adding Context to Edges
 ## Case Study 1: Nobelprize Network
 ### Edge fan-out
 <img src="nobelprize-network_v1/preview.jpg" width="200" heigth="200">
+[Demo](https://uclab.fh-potsdam.de/unfoldingedges/nobelprize-network_v1/nobelprize-network_v1.html) | [Code](https://github.com/uclab-potsdam/unfolding-edges/tree/main/nobelprize-network_v1)
 
 ### Timeline inset
 <img src="nobelprize-network_v2/preview.jpg" width="200" heigth="200">
+[Demo](https://uclab.fh-potsdam.de/unfoldingedges/nobelprize-network_v2/nobelprize-network_v2.html) | [Code](https://github.com/uclab-potsdam/unfolding-edges/tree/main/nobelprize-network_v2)
 
 ## Case Study 2: Conflict Network
 <img src="conflict-network/preview.jpg" width="200" heigth="200">
+[Demo](https://uclab.fh-potsdam.de/unfoldingedges/conflict-network/conflict-network.html) | [Code](https://github.com/uclab-potsdam/unfolding-edges/tree/main/conflict-network)
 
 
 ## Used libraries
